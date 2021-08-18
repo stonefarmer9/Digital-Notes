@@ -22,3 +22,22 @@ export const MOCK_TABLE_DATA = [
   }
 
 ]
+
+export const MOCK_NOTE_GROUPS = [
+  {
+    id: 1,
+    name: 'Quests'
+  },
+  {
+    id: 2,
+    name: "NPC's"
+  },
+  {
+    id: 3,
+    name: 'Locations'
+  },
+  {
+    id: 4,
+    name: 'Inventory'
+  }
+]

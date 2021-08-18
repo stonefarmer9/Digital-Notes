@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <H1>LETS NOTE</H1>
+    <h1>LETS NOTE</h1>
+    <NotesGroups
+      :noteGroups="noteGroups"
+      @updateSelectedNoteGroups="updateSelectedNoteGroups"
+    />
+    {{selectedNoteGroups}}
     <NoteTable
       :notes="notesData"
     />
@@ -9,17 +14,26 @@
 
 <script>
 import NoteTable from '@/components/NotesTable.vue'
-import { MOCK_TABLE_DATA } from '../../tests/unit/testHelpers/testHelperConstants.js'
+import NotesGroups from '@/components/NotesGroups.vue'
+import { MOCK_NOTE_GROUPS, MOCK_TABLE_DATA } from '../../tests/unit/testHelpers/testHelperConstants.js'
 
 export default {
   name: 'Home',
   components: {
-    NoteTable
+    NoteTable,
+    NotesGroups
   },
   data () {
     return {
       notesEmpty: [],
-      notesData: MOCK_TABLE_DATA
+      notesData: MOCK_TABLE_DATA,
+      noteGroups: MOCK_NOTE_GROUPS,
+      selectedNoteGroups: []
+    }
+  },
+  methods: {
+    'updateSelectedNoteGroups' (selectedGroups) {
+      this.selectedNoteGroups = selectedGroups
     }
   }
 }
