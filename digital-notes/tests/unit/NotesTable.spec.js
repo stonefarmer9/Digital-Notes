@@ -2,16 +2,19 @@ import { mount } from '@vue/test-utils'
 import { MOCK_TABLE_DATA } from './testHelperContants'
 import NotesTable from '@/components/NotesTable.vue'
 
-describe('NotesTable.vue', () => {
+
+describe('NotesTable.vue with props', () => {
+
   let wrapper;
   let table;
-  let rows;
+  let tableBodyRows;
+  
   beforeAll(() => {
     wrapper = mount(NotesTable, {
       props: { notes: MOCK_TABLE_DATA }
     });
     table = wrapper.find("table");
-    rows = wrapper.findAll("tbody > tr")
+    tableBodyRows = wrapper.findAll("tbody > tr");
     
   })
 
@@ -23,7 +26,34 @@ describe('NotesTable.vue', () => {
 
   
   })
-  it("renders the notes passed as table rows", () => {
-    expect(rows).toHaveLength(3)
+
+  it("renders the notes passed as table tableBodyRows", () => {
+    expect(tableBodyRows).toHaveLength(3)
+  })
+})
+
+describe("NotesTable.vue without props", () => {
+  let wrapper;
+  let tableHead;
+  let tableBody;
+  let waterMark;
+  beforeEach(() => {
+    wrapper = mount(NotesTable, {
+      props: { notes: [] }
+    })
+    tableHead = wrapper.find("th");
+    tableBody = wrapper.find('tbody');
+    waterMark = wrapper.find('span')
+
+  })
+  it("renders the table header", () => {
+    expect(tableHead.exists()).toBe(true)
+  }),
+    it("does not render the table body", () => {
+    expect(tableBody.exists()).toBe(false)
+    })
+  it("renders a span with the message 'No data for table'", () => {
+    expect(waterMark.exists()).toBe(true);
+    expect(waterMark.html()).toBe('<span>No data for table</span>')
   })
 })
