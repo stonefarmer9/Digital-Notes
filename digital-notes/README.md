@@ -65,6 +65,12 @@ The MVP for thos project will be a Front-End app that can store and render notes
 
 The next stage of MVP will be an app that saves data in a MongoDB database.
 
+### Workflow
+
+I have used Github projects to manage to the workflow of this project. Using simple tickets to break tasks down into easy to manage chunks and generally keep myself organised. For the sake of ease and ability to focus on the code side of things I will not be using a strict user story and acceptance criteria methodology but will work with them loosely as a handy guide.
+
+Each ticket will have a branch associated with it and I will open PR's when the ticket is complete. As I am alone working on this project PR review process will be worked on to find a happy and rigid methodology that allows me to review my own code thoroughly (Will be updated here)
+
 ## Testing
 
 Testing for the App will be carried out in a TDD methodology as much as possible. To ensure this process is followed correctly my commits for each feature will follow this structure:
