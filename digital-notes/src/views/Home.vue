@@ -9,6 +9,7 @@
 
 <script>
 import NoteTable from '@/components/NotesTable.vue'
+import { MOCK_TABLE_DATA } from '../../tests/unit/testHelpers/testHelperConstants.js'
 
 export default {
   name: 'Home',
@@ -18,30 +19,7 @@ export default {
   data () {
     return {
       notesEmpty: [],
-      notesData: [
-        {
-          id: 1,
-          title: 'Note Title One',
-          noteGroup: 'quests',
-          dateCreated: '18/08/2021',
-          note: 'This is a note about one thing or another'
-        },
-        {
-          id: 2,
-          title: 'Note Title Two',
-          noteGroup: 'npcs',
-          dateCreated: '18/08/2021',
-          note: 'This is a note about two things or another'
-        },
-        {
-          id: 3,
-          title: 'Note Title Three',
-          noteGroup: 'locations',
-          dateCreated: '18/08/2021',
-          note: 'This is a note about three things or another'
-        }
-
-      ]
+      notesData: MOCK_TABLE_DATA
     }
   }
 }
