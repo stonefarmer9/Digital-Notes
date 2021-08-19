@@ -41,3 +41,11 @@ export const MOCK_NOTE_GROUPS = [
     name: 'Inventory'
   }
 ]
+
+export const MOCK_NOTE = {
+  id: 5,
+  title: 'Mock Note Display',
+  noteGroup: 'quests',
+  dateCreated: '10/08/2021',
+  note: 'The quest for mock data'
+}
