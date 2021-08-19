@@ -7,7 +7,7 @@
             <th>Date Created</th>
         </tr>
         <tbody v-if="notes.length > 0">
-            <tr v-for="note in notes" :key="note.id" class="table-row">
+            <tr v-for="note in notes" :key="note.id" class="table-row" @click="$emit('selectNote', note)">
                 <td>{{ note.noteGroup }}</td>
                 <td>{{ note.title }}</td>
                 <td>{{ note.dateCreated }}</td>

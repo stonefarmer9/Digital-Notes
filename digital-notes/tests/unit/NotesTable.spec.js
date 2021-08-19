@@ -41,7 +41,7 @@ describe('NotesTable.vue without props', () => {
   })
   it('renders the table header', () => {
     expect(tableHead.exists()).toBe(true)
-  }),
+  })
   it('does not render the table body', () => {
     expect(tableBody.exists()).toBe(false)
   })

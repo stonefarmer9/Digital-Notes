@@ -5,14 +5,14 @@ import { MOCK_NOTE_GROUPS } from './testHelpers/testHelperConstants.js'
 describe('NotesGroups.vue', () => {
   let wrapper
   beforeAll(() => {
-      wrapper = mount(NotesGroups, {
-        props: { noteGroups: MOCK_NOTE_GROUPS }
+    wrapper = mount(NotesGroups, {
+      props: { noteGroups: MOCK_NOTE_GROUPS }
     })
   })
   afterAll(() => {
     wrapper.destroy()
   })
-    
+
   it('Renders a list of note groups', () => {
     expect(wrapper.findAll('li')).toHaveLength(4)
   })
@@ -24,8 +24,8 @@ describe('NotesGroups.vue', () => {
 describe('NotesGroup checkbox functionality', () => {
   let wrapper
   beforeAll(() => {
-      wrapper = mount(NotesGroups, {
-        props: { noteGroups: MOCK_NOTE_GROUPS }
+    wrapper = mount(NotesGroups, {
+      props: { noteGroups: MOCK_NOTE_GROUPS }
     })
   })
   afterAll(() => {

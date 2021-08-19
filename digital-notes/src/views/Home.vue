@@ -8,10 +8,10 @@
     {{selectedNoteGroups}}
     <NoteTable
       :notes="notesData"
+      @selectNote="selectNote"
     />
     <NoteDisplay
       :selectedNote="selectedNote"
-      @selectNote="selectNote"
       />
   </div>
 </template>
@@ -31,7 +31,6 @@ export default {
   },
   data () {
     return {
-      notesEmpty: [],
       notesData: MOCK_TABLE_DATA,
       noteGroups: MOCK_NOTE_GROUPS,
       selectedNoteGroups: [],
@@ -43,7 +42,6 @@ export default {
       this.selectedNoteGroups = selectedGroups
     },
     'selectNote' (note) {
-      console.log('selecting')
       this.selectedNote = note
     }
   }
