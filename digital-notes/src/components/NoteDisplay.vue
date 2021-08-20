@@ -28,9 +28,6 @@ export default {
 
 <style scoped lang="scss">
 
-div {
-}
-
 dl {
   @include definition-list
 }
