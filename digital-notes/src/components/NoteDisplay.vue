@@ -26,5 +26,24 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+div {
+}
+
+dl {
+  @include definition-list
+}
+
+dt {
+  font-weight: $bold-text-weight;
+  text-align: right;
+  width: 20%;
+}
+
+dd {
+  width: 80%;
+  text-align: left;
+}
+
 </style>

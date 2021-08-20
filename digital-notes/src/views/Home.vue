@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <h1>LETS NOTE</h1>
-    <NotesGroups
-      :noteGroups="noteGroups"
-      @updateSelectedNoteGroups="updateSelectedNoteGroups"
-    />
-    {{selectedNoteGroups}}
-    <NoteTable
-      :notes="notesData"
-      @selectNote="selectNote"
-    />
-    <NoteDisplay
-      :selectedNote="selectedNote"
+    <div class="card">
+      <NotesGroups
+        :noteGroups="noteGroups"
+        @updateSelectedNoteGroups="updateSelectedNoteGroups"
       />
+    </div>
+    <div class="card">
+      <NoteTable
+        :notes="notesData"
+        @selectNote="selectNote"
+      />
+    </div>
+    <div class="card">
+      <NoteDisplay
+        :selectedNote="selectedNote"
+        />
+    </div>
   </div>
 </template>
 
@@ -47,3 +51,18 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+.home {
+  @include flex-main;
+}
+
+.card {
+  @include card(40%);
+}
+
+.card:nth-child(1) {
+  @include card(15%);
+}
+</style>

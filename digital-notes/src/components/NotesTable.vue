@@ -28,6 +28,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+div {
+    padding: $padding-card;
+}
+table {
+    @include table;
+}
+
+tr {
+    @include table-rows;
+}
+
+thead {
+    @include table-head;
+}
+
+th, td {
+    @include table-border;
+}
 
 </style>

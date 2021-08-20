@@ -29,6 +29,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+ul {
+  @include list;
+  @include flex-column;
+}
 
 </style>
