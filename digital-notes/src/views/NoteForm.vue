@@ -1,11 +1,14 @@
 <template>
-    
+   <TextBox
+    :style="normal"
+   />
 </template>
 
 <script>
-
+import { TextBox } from '../components/FormComponents'
 export default {
-    name: "NoteForm"
+  components: { TextBox },
+  name: 'NoteForm'
 }
 </script>
 
