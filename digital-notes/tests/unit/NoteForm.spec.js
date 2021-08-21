@@ -1,8 +1,8 @@
 import { mount } from '@vue/test-utils'
 import { NoteForm } from '@/views'
-import { TextBox } from '@/components/FormComponents'
+import { TextBox, TextArea, MultiSelect, TagInput} from '@/components/FormComponents'
 
-describe('NoteForm.vue', () => {
+describe('NoteForm.vue renders the correct input fields', () => {
   let wrapper
 
   beforeEach(() => {
@@ -16,5 +16,14 @@ describe('NoteForm.vue', () => {
   })
   it('Renders a text input component', () => {
     expect(wrapper.findComponent(TextBox).exists()).toBe(true)
+  })
+  it('Renders a text Area input component', () => {
+    expect(wrapper.findComponent(TextArea).exists()).toBe(true)
+  })
+  it('Renders a Multi-select dropdown', () => {
+    expect(wrapper.findComponent(MultiSelect).exists()).toBe(true)
+  })
+    it('Renders a tag input component', () => {
+      expect(wrapper.findComponent(TagInput).exists()).toBe(true)
   })
 })

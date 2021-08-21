@@ -1,13 +1,14 @@
 <template>
-   <TextBox
-    :style="normal"
-   />
+   <TextBox/>
+   <TextArea/>
+   <MultiSelect/>
+   <TagInput/>
 </template>
 
 <script>
-import { TextBox } from '../components/FormComponents'
+import { TextBox, TextArea, MultiSelect, TagInput } from '../components/FormComponents'
 export default {
-  components: { TextBox },
+  components: { TextBox, TextArea, MultiSelect, TagInput },
   name: 'NoteForm'
 }
 </script>

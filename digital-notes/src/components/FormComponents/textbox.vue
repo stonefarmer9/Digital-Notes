@@ -5,10 +5,6 @@
 <script>
 
 export default {
-  name: 'TextBox',
-
-  props: {
-    style: String
-  }
+  name: 'TextBox'
 }
 </script>
