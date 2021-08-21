@@ -1,8 +1,14 @@
 <template>
+<div>
+<label>Title</label>
    <TextBox/>
+   <label>Note</label>
    <TextArea/>
+   <label>Groups/Categories</label>
    <MultiSelect/>
+   <label>Tags</label>
    <TagInput/>
+</div>
 </template>
 
 <script>
