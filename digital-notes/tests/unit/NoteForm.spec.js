@@ -26,6 +26,9 @@ describe('NoteForm.vue renders the correct input fields', () => {
   it('Renders a tag input component', () => {
     expect(wrapper.findComponent(TagInput).exists()).toBe(true)
   })
+  it('Renders a submit button', () => {
+    expect(wrapper.findComponent(Button).exists()).toBe(true)
+  })
 })
 
 describe('NoteFrom.vue renders labels for each input', () => {
