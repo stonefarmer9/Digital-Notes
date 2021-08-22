@@ -1,12 +1,21 @@
 <template>
-    <div>
-        <input type='text'>
-    </div>
+    <input type='text' v-bind:style="style">
 </template>
 
 <script>
 
 export default {
-  name: 'TagInput'
+  name: 'TagInput',
+  props: {
+    width: String
+  },
+
+  computed: {
+    style () {
+      return {
+        width: this.width + '%'
+      }
+    }
+  }
 }
 </script>

@@ -2,8 +2,8 @@
 <textarea
     id="note-body"
     name="note-body"
-    rows="20"
-    columns="15"
+    v-bind:style="style"
+    rows=10
 ></textarea>
 
 </template>
@@ -11,6 +11,26 @@
 <script>
 
 export default {
-  name: 'TextArea'
+  name: 'TextArea',
+
+  props: {
+    width: String
+  },
+  computed: {
+    style () {
+      return {
+        width: this.width + '%'
+      }
+    }
+
+  }
 }
 </script>
+
+<style lang="scss" scoped>
+
+textarea {
+  font-family: $font-text;
+}
+
+</style>

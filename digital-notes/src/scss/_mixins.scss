@@ -55,3 +55,9 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+@mixin form-layout {
+  display: flex;
+  flex-direction: column;
+  vertical-align: baseline;
+  justify-content: center;
+}
