@@ -1,14 +1,15 @@
 <template>
-    <input type="text" v-bind:style="style">
+    <input type='text' v-bind:style="style">
 </template>
 
 <script>
 
 export default {
-  name: 'TextBox',
+  name: 'TagInput',
   props: {
     width: Number
   },
+
   computed: {
     style () {
       return {
@@ -16,10 +17,5 @@ export default {
       }
     }
   }
-
 }
 </script>
-
-<style scoped lang='scss'>
-
-</style>

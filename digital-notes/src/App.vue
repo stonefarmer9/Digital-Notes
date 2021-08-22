@@ -1,7 +1,9 @@
 <template>
   <div id="nav">
+    <router-link :to="{name: 'Home'}">Home</router-link>
+    <router-link :to="{name: 'Add Note'}">Add Note</router-link>
+    <router-view></router-view>
   </div>
-  <router-view/>
 </template>
 
 <style lang="scss">
