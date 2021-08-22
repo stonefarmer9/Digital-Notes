@@ -17,7 +17,7 @@ describe('NoteDisplay.vue', () => {
     expect(wrapper.findAll('dt')).toHaveLength(4)
   })
 
-    it('renders the prop note in a definition list', () => {
+  it('renders the prop note in a definition list', () => {
     const definitionList = wrapper.findAll('dl')
     const firstDefinition = definitionList[0]
     const secondDefinition = definitionList[1]

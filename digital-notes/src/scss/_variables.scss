@@ -1,5 +1,6 @@
 $font-text: "Noto Sans", "Open Sans", sans-seriff;
 $colour-navy-blue: #022969;
+$colour-light-blue: #05bcff;
 $colour-black: #000000;
 $colour-white: #ffffff;
 $colour-red-alert: #f70707;
@@ -11,3 +12,10 @@ $colour-off-gray: #e4e9f2;
 $padding-card: 5%;
 
 $bold-text-weight: 600;
+
+$small-border-gray: 0.5px solid $colour-gray;
+
+$small-border-black: 1px solid $colour-black;
+
+$box-shadow-light: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
