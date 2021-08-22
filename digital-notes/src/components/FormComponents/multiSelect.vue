@@ -16,7 +16,7 @@ export default {
   components: { VueMultiselect },
 
   props: {
-    width: String
+    width: Number
   },
 
   data () {

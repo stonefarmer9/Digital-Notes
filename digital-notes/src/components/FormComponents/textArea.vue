@@ -14,7 +14,7 @@ export default {
   name: 'TextArea',
 
   props: {
-    width: String
+    width: Number
   },
   computed: {
     style () {

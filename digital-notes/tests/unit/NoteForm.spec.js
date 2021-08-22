@@ -6,7 +6,13 @@ describe('NoteForm.vue renders the correct input fields', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = mount(NoteForm)
+    wrapper = mount(NoteForm, {
+      data() {
+        return {
+          formWidth: 100
+        }
+      }
+    })
   })
   afterEach(() => {
     wrapper = null

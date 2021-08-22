@@ -7,7 +7,7 @@
 export default {
   name: 'TagInput',
   props: {
-    width: String
+    width: Number
   },
 
   computed: {
