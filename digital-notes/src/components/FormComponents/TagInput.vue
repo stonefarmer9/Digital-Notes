@@ -1,11 +1,21 @@
 <template>
-    <input type='text' v-bind:style="style">
+    <input
+      type='text'
+      v-bind:style="style"
+      >
 </template>
 
 <script>
 
 export default {
+
   name: 'TagInput',
+
+  data () {
+    return {
+      tags: []
+    }
+  },
   props: {
     width: Number
   },
@@ -15,6 +25,11 @@ export default {
       return {
         width: this.width + '%'
       }
+    }
+  },
+  watch: {
+    'tags' () {
+      this.$emit('update', this.tags)
     }
   }
 }

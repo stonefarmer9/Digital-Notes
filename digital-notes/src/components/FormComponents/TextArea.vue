@@ -3,6 +3,8 @@
     id="note-body"
     name="note-body"
     v-bind:style="style"
+    v-model="input"
+    v-on:blur="$emit('update', input)"
     rows=10
 ></textarea>
 
@@ -12,6 +14,12 @@
 
 export default {
   name: 'TextArea',
+
+  data () {
+    return {
+      input: ''
+    }
+  },
 
   props: {
     width: Number

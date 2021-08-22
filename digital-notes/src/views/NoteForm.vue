@@ -4,24 +4,28 @@
         <label>Title</label>
         <TextBox
           :width="formWidth"
+          @update="updateTitle"
         />
     </span>
     <span>
         <label>Note</label>
         <TextArea
         :width="formWidth"
+        @update="updateDetail"
         />
     </span>
     <span>
         <label>Groups/Categories</label>
         <MultiSelect
         :width="formWidth"
+        @update="updateGroups"
         />
     </span>
     <span>
         <label>Tags</label>
         <TagInput
         :width="formWidth"
+        @update="updateTags"
         />
     </span>
     <span class="button">
@@ -40,7 +44,27 @@ export default {
 
   data () {
     return {
-      formWidth: 100
+      formWidth: 100,
+      note: {
+        title: '',
+        detail: '',
+        groups: []
+      }
+    }
+  },
+
+  methods: {
+    'updateTitle' (string) {
+      this.note.title = string
+    },
+    'updateDetail' (string) {
+      this.note.detail = string
+    },
+    'updateGroups' (array) {
+      this.note.groups = array
+    },
+    'updateTags' (array) {
+      this.note.tags = array
     }
   }
 }
