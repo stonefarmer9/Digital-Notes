@@ -1,13 +1,13 @@
 import { mount } from '@vue/test-utils'
 import { NoteForm } from '@/views'
-import { TextBox, TextArea, MultiSelect, TagInput } from '@/components/FormComponents'
+import { TextBox, TextArea, MultiSelect, TagInput, Button } from '@/components'
 
 describe('NoteForm.vue renders the correct input fields', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = mount(NoteForm, {
-      data() {
+      data () {
         return {
           formWidth: 100
         }

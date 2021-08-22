@@ -1,5 +1,10 @@
-import textBox from './FormComponents'
+import { MultiSelect, TextArea, TextBox, TagInput } from './FormComponents'
+import Button from './Button'
 
 export {
-  textBox
+  MultiSelect,
+  TextArea,
+  TextBox,
+  TagInput,
+  Button
 }

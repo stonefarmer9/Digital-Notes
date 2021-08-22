@@ -39,15 +39,15 @@
 
 @mixin card($width) {
   background-color: $colour-off-gray;
-  border: 0.5px sold $colour-gray;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: $small-border-gray;
+  box-shadow: $box-shadow-light;
   width: $width;
   height: 80vh;
 }
 
 @mixin table-border {
-  border-bottom: 1px solid $colour-black;
+  border-bottom: $small-border-black;
 }
 
 @mixin definition-list {
@@ -60,4 +60,12 @@
   flex-direction: column;
   vertical-align: baseline;
   justify-content: center;
+}
+
+@mixin button-submit {
+  height: 4vh;
+  width: 20%;
+  border-radius: 8px;
+  border: $small-border-gray;
+  box-shadow: $box-shadow-light;
 }

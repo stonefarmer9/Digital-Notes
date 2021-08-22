@@ -24,13 +24,18 @@
         :width="formWidth"
         />
     </span>
+    <span class="button">
+        <Button
+         :label="'Add Note'"
+        />
+    </span>
     </div>
 </template>
 
 <script>
-import { TextBox, TextArea, MultiSelect, TagInput } from '../components/FormComponents'
+import { TextBox, TextArea, MultiSelect, TagInput, Button } from '../components'
 export default {
-  components: { TextBox, TextArea, MultiSelect, TagInput },
+  components: { TextBox, TextArea, MultiSelect, TagInput, Button },
   name: 'NoteForm',
 
   data () {
@@ -52,7 +57,7 @@ span {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 70%;
+    width: 90%;
     padding: 2%;
 }
 label {
@@ -60,4 +65,10 @@ label {
     text-align: right;
     margin-right: 5%;
 }
+.button {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
 </style>
