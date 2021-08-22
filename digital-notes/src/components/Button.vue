@@ -17,4 +17,8 @@ export default {
 button {
     @include button-submit;
 }
+
+button:hover {
+    @include button-hover;
+}
 </style>
