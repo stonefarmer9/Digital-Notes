@@ -69,3 +69,8 @@
   border: $small-border-gray;
   box-shadow: $box-shadow-light;
 }
+
+@mixin button-hover {
+  color: $colour-white;
+  background-color: $colour-light-blue;
+}
